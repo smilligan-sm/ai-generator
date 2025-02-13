@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </head>
   <body>
     <div class="container">
@@ -18,7 +19,7 @@
         <h1>Random Fact Generator</h1>
       </header>
       <main>
-        <form class="topic-form">
+        <form class="topic-form" id="form-generator">
           <input
             type="text"
             placeholder="Enter your choice of topic"
@@ -29,9 +30,7 @@
           />
           <input type="submit" - class="topic-submit" />
         </form>
-        <div class="results">
-          Random fact will be listed here <br />With some extra info
-        </div>
+        <div class="results" id="results"></div>
       </main>
     </div>
     <footer>
@@ -47,6 +46,6 @@
         >Netlify</a
       >
     </footer>
-    <script src="/src/index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
