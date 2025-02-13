@@ -20,10 +20,6 @@ function generateFact(event) {
   resultsElement.classList.remove("hidden");
   resultsElement.innerHTML = `<div class="blink">⏳  Finding you some facts about ${userInput.value}......</div>`;
 
-  console.log("Generating Fact");
-  console.log(`Context: ${context}`);
-  console.log(`Prompt: ${prompt}`);
-
   axios.get(apiUrl).then(displayFact);
 }
 
