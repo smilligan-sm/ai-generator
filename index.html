@@ -3,26 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>AI Generator</title>
-    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1>Random Fact Generator</h1>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter your choice of topic"
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <input type="submit" />
-      </form>
-      <div>Random fact will be listed here</div>
-    </main>
+    <div class="container">
+      <header>
+        <h1>Random Fact Generator</h1>
+      </header>
+      <main>
+        <form class="topic-form">
+          <input
+            type="text"
+            placeholder="Enter your choice of topic"
+            class="topic-selector"
+            autofocus
+            required
+            autocomplete="off"
+          />
+          <input type="submit" - class="topic-submit" />
+        </form>
+        <div class="results">
+          Random fact will be listed here <br />With some extra info
+        </div>
+      </main>
+    </div>
     <footer>
       Built by
       <a href="https://github.com/smilligan-sm" target="_blank"
