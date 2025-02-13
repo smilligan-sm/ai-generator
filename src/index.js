@@ -3,7 +3,7 @@ function displayFact(response) {
     strings: response.data.answer,
     autoStart: true,
     cursor: "",
-    delay: 10,
+    delay: 15,
   });
 }
 
@@ -15,6 +15,10 @@ function generateFact(event) {
   let prompt = `You are a smart AI assistant who likes to tell us weird but true facts. Your mission is to tell us a fact that directly relates to the topic of the User Instructions. Your result must be 2 sentences long and in basic HTML. Please add a <br /> to the end of the first sentence and do not add any markdown to the result.`;
   let context = `User Instructions: tell me a fact about ${userInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let resultsElement = document.querySelector("#results");
+  resultsElement.classList.remove("hidden");
+  resultsElement.innerHTML = `<div class="blink">⏳  Finding you some facts about ${userInput.value}......</div>`;
 
   console.log("Generating Fact");
   console.log(`Context: ${context}`);
